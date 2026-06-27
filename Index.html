@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASCAR Dynasty Draft</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="game-shell">
+    <section class="hero panel">
+      <div>
+        <p class="eyebrow">Fantasy garage strategy</p>
+        <h1>NASCAR Dynasty Draft</h1>
+        <p class="intro">Build a long-term racing powerhouse. Draft drivers, balance your salary cap, and chase the highest dynasty score before the board dries up.</p>
+      </div>
+      <div class="score-card" aria-live="polite">
+        <span>Dynasty Score</span>
+        <strong id="score">0</strong>
+      </div>
+    </section>
+
+    <section class="dashboard">
+      <div class="panel controls">
+        <h2>Draft Command Center</h2>
+        <div class="stats-grid">
+          <div><span>Round</span><strong id="round">1 / 5</strong></div>
+          <div><span>Budget</span><strong id="budget">$100M</strong></div>
+          <div><span>Roster</span><strong id="roster-count">0 / 5</strong></div>
+        </div>
+        <div class="button-row">
+          <button id="sort-value" type="button">Sort by Value</button>
+          <button id="sort-cost" type="button">Sort by Cost</button>
+          <button id="reset" type="button" class="secondary">New Draft</button>
+        </div>
+        <p id="message" class="message">Pick five drivers. Future upside and consistency matter as much as raw speed.</p>
+      </div>
+
+      <div class="panel roster-panel">
+        <h2>Your Dynasty Garage</h2>
+        <ul id="roster" class="roster empty">
+          <li>No drivers drafted yet.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="panel board-panel">
+      <div class="section-header">
+        <div>
+          <p class="eyebrow">Available prospects</p>
+          <h2>Draft Board</h2>
+        </div>
+        <p>Tap a driver card to add them to your garage.</p>
+      </div>
+      <div id="driver-board" class="driver-board" aria-live="polite"></div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
